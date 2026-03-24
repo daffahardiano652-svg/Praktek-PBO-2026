@@ -1,0 +1,15 @@
+//Nama : Daffa Hardiano
+//Nim  : 2501081009
+import java.util.Scanner;
+
+public class Tugas4 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int bil;
+        do {
+            System.out.print("Masukkan bilangan genap: ");
+            bil = in.nextInt();
+        } while (bil % 2 != 0);
+        System.out.println("Hasil: " + (bil + 1));
+    }
+}
