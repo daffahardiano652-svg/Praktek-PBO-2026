@@ -1,0 +1,18 @@
+//Nama : Daffa Hardiano
+//Nim  : 2501081009
+import java.util.Scanner;
+
+public class Tugas6 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Umur PNP: ");
+        int umur = in.nextInt();
+
+        if (umur % 10 == 0) {
+            System.out.println("Dekade PNP Ke-" + (umur / 10));
+        } else {
+            System.out.println("Dies Natalis PNP Ke-" + umur);
+        }
+    }
+}
+
