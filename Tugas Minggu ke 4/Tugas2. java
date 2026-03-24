@@ -1,0 +1,30 @@
+//Nama : Daffa Hardiano
+//Nim  : 2501081009
+import java.util.Scanner;
+
+public class Tugas2 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Pilih Merek (X/Y/Z): ");
+        char merek = in.next().toUpperCase().charAt(0);
+        System.out.print("Jumlah beli: ");
+        int jumlah = in.nextInt();
+
+        double harga = 0, diskon = 0;
+        if (merek == 'X') {
+            harga = 40000 * jumlah;
+            if (jumlah > 3) diskon = 0.10 * harga;
+        } else if (merek == 'Y') {
+            harga = 50000 * jumlah;
+            if (jumlah > 3) diskon = 0.12 * harga;
+        } else if (merek == 'Z') {
+            harga = 60000 * jumlah;
+            if (jumlah > 2) diskon = 0.15 * (60000 * (jumlah - 1));
+        }
+
+        System.out.println("Total: Rp " + harga);
+        System.out.println("Diskon: Rp " + diskon);
+        System.out.println("Bayar: Rp " + (harga - diskon));
+    }
+}
+
