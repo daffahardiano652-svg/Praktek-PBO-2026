@@ -1,0 +1,19 @@
+//Nama : Daffa Hardiano
+//Nim  : 2501081009
+import java.util.Scanner;
+public class Tugas1 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int totalHalaman = 50;
+        int hargaPerHal = 15000;
+        
+        System.out.print("Halaman selesai (X): ");
+        int x = in.nextInt();
+        
+        int diterima = x * hargaPerHal;
+        int sisa = (totalHalaman - x) * hargaPerHal;
+        
+        System.out.println("Uang diterima: Rp " + diterima);
+        System.out.println("Uang sisa: Rp " + sisa);
+    }
+}
