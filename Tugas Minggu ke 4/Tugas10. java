@@ -1,0 +1,35 @@
+//Nama : Daffa Hardiano
+//Nim  : 2501081009
+import java.util.Scanner;
+
+public class Tugas10 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int[][] harga = {
+            {70000, 40000, 10000}, // Jkt
+            {80000, 50000, 20000}, // Yogya
+            {90000, 60000, 30000}  // Sby
+        };
+
+        System.out.print("Tujuan (1.JKT, 2.YGY, 3.SBY): ");
+        int tuj = in.nextInt() - 1;
+        System.out.print("Kelas (1.Eks, 2.Bis, 3.Eko): ");
+        int kls = in.nextInt() - 1;
+        System.out.print("Jumlah tiket: ");
+        int jml = in.nextInt();
+
+        int hargaSatuan = harga[tuj][kls];
+        int total = hargaSatuan * jml;
+        double diskon = 0;
+
+        if (kls == 0 && jml >= 3) {
+            diskon = 0.10 * total;
+        }
+
+        System.out.println("Harga Tiket: Rp " + hargaSatuan);
+        System.out.println("Total Harga: Rp " + total);
+        System.out.println("Diskon: Rp " + diskon);
+        System.out.println("Besar Bayar: Rp " + (total - diskon));
+    }
+}
+
