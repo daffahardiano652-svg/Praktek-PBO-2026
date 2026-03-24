@@ -1,0 +1,26 @@
+//Nama : Daffa Hardiano
+//Nim  : 2501081009
+import java.util.Scanner;
+
+public class Tugas3 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Batas awal: ");
+        int awal = in.nextInt();
+        System.out.print("Batas akhir: ");
+        int akhir = in.nextInt();
+
+        int total = 0;
+        int banyak = 0;
+
+        for (int i = awal; i <= akhir; i++) {
+            if (i % 2 != 0 && i % 11 == 0) {
+                System.out.print(i + " ");
+                total += i;
+                banyak++;
+            }
+        }
+        System.out.println("\nJumlah: " + total);
+        if (banyak > 0) System.out.println("Rata-rata: " + (double)total/banyak);
+    }
+}
