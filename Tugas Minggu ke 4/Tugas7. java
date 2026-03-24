@@ -1,0 +1,21 @@
+//Nama : Daffa Hardiano
+//Nim  : 2501081009
+import java.util.Scanner;
+
+public class Tugas7 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Jam lembur : ");
+        int jam = in.nextInt();
+        if (jam > 50) jam = 50; // Batas maksimal
+
+        int upah;
+        if (jam <= 20) {
+            upah = jam * 2000;
+        } else {
+            upah = jam * 3000;
+        }
+        System.out.println("Total upah lembur: Rp " + upah);
+    }
+}
+
