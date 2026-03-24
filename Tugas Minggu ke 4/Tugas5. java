@@ -1,0 +1,20 @@
+//Nama : Daffa Hardiano
+//Nim  : 2501081009
+import java.util.Scanner;
+
+public class Tugas5 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Nomor awal: ");
+        int start = in.nextInt();
+        System.out.print("Nomor akhir: ");
+        int end = in.nextInt();
+
+        System.out.print("Portal terbuka pada misi: ");
+        for (int i = start; i <= end; i++) {
+            if (i % 3 == 0 && i % 4 == 0) {
+                System.out.print(i + " ");
+            }
+        }
+    }
+}
