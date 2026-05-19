@@ -20,7 +20,13 @@ public class Karyawan {
         return nama;
     }
 
+    
     public double hitungTotalGaji() {
-        return 0; // Default
+        return 0; 
+    }
+
+    
+    public void cetakGaji() {
+        System.out.println("Nama Karyawan : " + this.nama);
     }
 }
