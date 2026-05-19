@@ -17,10 +17,25 @@ public class KaryawanTetap extends Karyawan {
         this.gajiBulanan = gajiBulanan;
     }
 
+
     @Override
     public double hitungTotalGaji() {
-        // Tunjangan 2.5% dari gaji bulanan (2.5 / 100 = 0.025)
+        // Rumus: Gaji + Tunjangan 2.5%
         double tunjangan = gajiBulanan * 0.025;
         return gajiBulanan + tunjangan;
+    }
+
+
+    @Override
+    public void cetakGaji() {
+        super.cetakGaji(); 
+        
+        double tunjangan = gajiBulanan * 0.025;
+        System.out.println("Status        : Karyawan Tetap");
+        System.out.println("Gaji Pokok    : Rp" + this.gajiBulanan);
+        System.out.println("Tunjangan     : Rp" + tunjangan);
+        
+        
+        System.out.println("Total Gaji    : Rp" + hitungTotalGaji() + " (Dari: Gaji + Tunjangan)");
     }
 }
